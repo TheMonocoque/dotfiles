@@ -1,0 +1,28 @@
+{
+    "editor.fontFamily": "Hack, FiraCode Nerd Font Mono, Consolas, 'Courier New', monospace",
+    "git.ignoreMissingGitWarning": true,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.columnSelection": false,
+    "editor.tabCompletion": "on",
+    "remote.SSH.remotePlatform": {
+        "k3server": "linux"
+    },
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.renderWhitespace": "all",
+    "editor.fontSize": 16,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#ffff00"
+        },
+        {
+            "column": 120,
+            "color": "#ff0000"
+        },
+    ],
+    "editor.codeActionsOnSave": {},
+    "editor.fontLigatures": false
+}
