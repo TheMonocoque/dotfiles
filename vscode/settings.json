@@ -24,5 +24,7 @@
         },
     ],
     "editor.codeActionsOnSave": {},
-    "editor.fontLigatures": false
+    "editor.fontLigatures": false,
+    "workbench.colorTheme": "FireFly Pro",
+    "files.autoSave": "afterDelay"
 }
