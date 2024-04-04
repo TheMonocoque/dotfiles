@@ -10,6 +10,10 @@
     "redhat.telemetry.enabled": false,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "list.inactiveSelectionBackground": "#909",
+        "minimapSlider.hoverBackground": "#909",
+    },
     "editor.renderWhitespace": "all",
     "editor.fontSize": 16,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
