@@ -1,6 +1,7 @@
 ZSH_THEME="agnoster"
 
 alias gjj="git --no-pager branch -vv"
+alias gnp="git --no-pager"
 # alias kb="kubectl"
 
 
