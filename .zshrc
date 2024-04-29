@@ -1,5 +1,8 @@
 ZSH_THEME="agnoster"
 
+# NB: find /usr/share/terminfo -type f -name "*256color"
+# export TERM=screen.putty-256color
+
 alias gjj="git --no-pager branch -vv"
 alias gnp="git --no-pager"
 # alias kb="kubectl"
