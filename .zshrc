@@ -2,11 +2,14 @@ ZSH_THEME="agnoster"
 
 # NB: find /usr/share/terminfo -type f -name "*256color"
 # export TERM=screen.putty-256color
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 
 alias gjj="git --no-pager branch -vv"
 alias gnp="git --no-pager"
+# git config --global rerere.enabled true
+alias grd="git rerere diff"
 # alias kb="kubectl"
-
 
 # study stream aliases
 # Requires https://github.com/caarlos0/timer to be installed. spd-say should ship with your distro
