@@ -5,7 +5,7 @@ ZSH_THEME="agnoster"
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
-alias gjj="git --no-pager branch -vv"
+alias gjj="printf '\nBranches:\n' && git --no-pager branch -vv && printf '\nWorktrees:\n' && git --no-pager worktree list && printf '\n'"
 alias gnp="git --no-pager"
 # git config --global rerere.enabled true
 alias grd="git rerere diff"
