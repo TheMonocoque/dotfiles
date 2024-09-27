@@ -10,6 +10,8 @@ alias gnp="git --no-pager"
 # git config --global rerere.enabled true
 alias grd="git rerere diff"
 # alias kb="kubectl"
+alias encme="openssl aes-256-cbc -a -salt -pbkdf2 -e -iter 100000 -salt --pass file:/home/user/.secret-key"
+alias decme="openssl aes-256-cbc -a -pbkdf2 -d -iter 100000 -salt --pass file:/home/user/.secret-key"
 
 # study stream aliases
 # Requires https://github.com/caarlos0/timer to be installed. spd-say should ship with your distro
