@@ -111,6 +111,7 @@ alias decme="openssl aes-256-cbc -a -pbkdf2 -d -iter 100000 -salt --pass file:$H
 alias gcsp1="git clone --filter=blob:none --no-checkout --depth 1"
 alias gcsp2="git sparse-checkout init --cone && git sparse-checkout set LICENSE"
 alias gcsp3="git checkout"
+alias fzk='find . -type f -name "*.md" | fzf --preview="bat -p --color=always {}" --preview-label "Zettelkasten Notes" --bind="enter:execute(nvim {+})"'
 
 # Do not need to setup GOROOT, just GOPATH suffices for local setup
 export GOPATH=~/go
