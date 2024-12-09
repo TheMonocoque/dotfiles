@@ -14,11 +14,17 @@ return {
         vim.keymap.set('n', '<C-p>', builtin.git_files, {})
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-        vim.keymap.set('n', '<leader>fo', builtin.oldfiles, {})
-        vim.keymap.set('n', '<leader>en', function()
-            require('telescope.builtin').find_files {
+        vim.keymap.set('n', '<leader>fo', function()
+            local opts = require('telescope.themes').get_ivy({
                 cwd = vim.fn.stdpath("config")
-            }
+            })
+            require('telescope.builtin').oldfiles(opts)
+        end)
+        vim.keymap.set('n', '<leader>en', function()
+            local opts = require('telescope.themes').get_ivy({
+                cwd = vim.fn.stdpath("config")
+            })
+            require('telescope.builtin').find_files(opts)
         end)
         vim.keymap.set('n', '<leader>pws', function()
             local word = vim.fn.expand("<cword>")
