@@ -113,6 +113,8 @@ alias gcsp2="git sparse-checkout init --cone && git sparse-checkout set LICENSE"
 alias gcsp3="git checkout"
 alias fzk='find . -type f -name "*.md" -not -path "./.zk/*" | fzf --cycle --preview="bat -p --color=always {}" --preview-label "Zettelkasten Notes" --bind="enter:execute(nvim {+})"'
 
+export GPG_TTY=$(tty)
+
 # Do not need to setup GOROOT, just GOPATH suffices for local setup
 export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
