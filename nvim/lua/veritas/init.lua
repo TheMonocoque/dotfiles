@@ -5,12 +5,18 @@ require("veritas.lazy_init")
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd('LspAttach', {
-    callback = function(e)
-        local opts = { buffer = e.buf }
+    callback = function(ev)
+        local opts = { buffer = ev.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
         vim.keymap.set('n', 'gD', function() vim.lsp.buf.declaration() end, opts)
         vim.keymap.set('n', 'vrr', function() vim.lsp.buf.references() end, opts)
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+
+        -- new in nvim version 11.0
+        -- local client = vim.lsp.get_client_by_id(ev.data.client_id)
+        -- if client:supports_method('textDocument/completion') then
+        --     vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+        -- end
     end
 })
 

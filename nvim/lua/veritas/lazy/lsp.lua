@@ -78,6 +78,8 @@ return {
 
         vim.diagnostic.config({
             -- update_in_insert = true,
+            -- virtual_lines = { current_line = true },
+            -- virtual_text = { current_line = true },
             float = {
                 focusable = false,
                 style = "minimal",
