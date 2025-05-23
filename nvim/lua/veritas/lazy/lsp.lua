@@ -27,7 +27,8 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
-                "jedi_language_server", -- python
+                -- "jedi_language_server", -- python
+                -- "pyright",
                 "gopls",
             },
             handlers = {
@@ -78,16 +79,28 @@ return {
 
         vim.diagnostic.config({
             -- update_in_insert = true,
-            -- virtual_lines = { current_line = true },
+            virtual_lines = { current_line = true },
             -- virtual_text = { current_line = true },
-            float = {
-                focusable = false,
-                style = "minimal",
-                border = "rounded",
-                source = "always",
-                header = "",
-                prefix = "",
-            },
+            -- float = {
+            --     focusable = false,
+            --     style = "minimal",
+            --     border = "rounded",
+            --     source = "always",
+            --     header = "",
+            --     prefix = "",
+            -- },
         })
+
+        -- instead of jedi and pyright, but this requires rustc
+        vim.lsp.config('ruff', {
+          init_options = {
+            settings = {
+              -- Ruff language server settings go here
+              logLevel = 'debug',
+            }
+          }
+        })
+        vim.lsp.enable('ruff')
+
     end
 }
