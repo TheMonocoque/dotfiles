@@ -112,6 +112,7 @@ alias gcsp1="git clone --filter=blob:none --no-checkout --depth 1"
 alias gcsp2="git sparse-checkout init --cone && git sparse-checkout set LICENSE"
 alias gcsp3="git checkout"
 alias fzk='find . -type f -name "*.md" -not -path "./.zk/*" | fzf --cycle --preview="bat -p --color=always {}" --preview-label "Zettelkasten Notes" --bind="enter:execute(nvim {+})"'
+alias uvr='uv run --'
 
 export GPG_TTY=$(tty)
 
