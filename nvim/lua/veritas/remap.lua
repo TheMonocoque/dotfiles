@@ -10,7 +10,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "<F9>", ':!%:p<CR>')
 
 -- callout to formatting tools
-vim.keymap.set("n", "<leader>fmb", "<CMD>!black -q -l 130 %<CR>")
+vim.keymap.set("n", "<leader>fmb", "<CMD>!ruff format --line-length 130 %<CR>")
 vim.keymap.set("n", "<leader>fmr", "<CMD>!ruff check --fix %<CR>")
 vim.keymap.set("n", "<leader>fmj", "<CMD>!jsonnetfmt -i -n 2 %<CR>")
+vim.keymap.set("n", "<leader>fmJ", "<CMD>.!python -m json.tool %<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
