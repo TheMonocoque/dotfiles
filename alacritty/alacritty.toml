@@ -1,0 +1,21 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+bold = { family = "FiraCode Nerd Font", style = "Bold" }
+italic = { family = "FiraCode Nerd Font", style = "Italic" }
+size = 16
+
+[window]
+padding.x = 5
+padding.y = 5
+decorations = "None"
+opacity = 0.98
+
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" },
+{ key = "b", mods = "Alt", chars = "\u001BB" },
+{ key = "f", mods = "Alt", chars = "\u001BF" },
+]
