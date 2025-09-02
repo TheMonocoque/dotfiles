@@ -114,6 +114,9 @@ alias gcsp3="git checkout"
 alias fzk='find . -type f -name "*.md" -not -path "./.zk/*" | fzf --cycle --preview="bat -p --color=always {}" --preview-label "Zettelkasten Notes" --bind="enter:execute(nvim {+})"'
 alias uvr='uv run --'
 
+# git config --add remote.origin.fetch '+refs/notes/*:refs/notes/*'
+# git config notes.displayRef 'refs/notes/*'
+
 export GPG_TTY=$(tty)
 
 # Do not need to setup GOROOT, just GOPATH suffices for local setup
