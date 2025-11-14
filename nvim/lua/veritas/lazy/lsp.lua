@@ -27,7 +27,9 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
-                "jedi_language_server", -- python
+                -- "jedi_language_server", -- python
+                "ruff",
+                "ty",
                 "gopls",
             },
             handlers = {
